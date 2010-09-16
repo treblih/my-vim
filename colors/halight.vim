@@ -20,7 +20,6 @@ let g:colors_name = "halight"
 
 " Normal {{{1
 hi Normal ctermfg=black ctermbg=NONE guifg=black guibg=#f9f5f9
-"hi Normal guifg=#ffffff guibg=#51574F
 
 " Search {{{1
 hi IncSearch cterm=UNDERLINE ctermfg=Black ctermbg=brown gui=UNDERLINE guifg=Black guibg=#FFE568
@@ -66,14 +65,16 @@ hi VisualNOS term=reverse ctermfg=yellow ctermbg=black gui=UNDERLINE guifg=Black
 
 " Syntax group {{{1
 hi Comment term=BOLD ctermfg=darkgray guifg=darkcyan gui=italic
-hi Constant term=UNDERLINE ctermfg=red guifg=#B91F49
+"hi Constant term=UNDERLINE ctermfg=red guifg=#B91F49
+hi Constant  term=UNDERLINE ctermfg=red   guifg=#304DAE gui=bold
 hi String       guifg=#F2710D
 hi Error term=REVERSE ctermfg=15 ctermbg=9 guibg=Red guifg=White
 hi Identifier term=UNDERLINE ctermfg=Blue guifg=Blue
 hi Number   term=UNDERLINE ctermfg=red gui=NONE guifg=#00C226
 hi PreProc term=UNDERLINE ctermfg=darkblue guifg=#1071CE
 hi Special term=BOLD ctermfg=darkmagenta guifg=red2
-hi Statement term=BOLD ctermfg=DarkRed gui=NONE guifg=#F06F00
+"hi Statement term=BOLD ctermfg=DarkRed gui=NONE guifg=#F06F00
+hi Statement   term=BOLD ctermfg=DarkRed      guifg=#79E914 gui=bold
 hi Tag term=BOLD ctermfg=DarkGreen guifg=DarkGreen
 hi Todo term=STANDOUT ctermbg=Yellow ctermfg=blue guifg=Blue guibg=Yellow
 hi Type term=UNDERLINE ctermfg=Blue gui=NONE guifg=Blue
