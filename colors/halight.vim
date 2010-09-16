@@ -16,7 +16,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "habiLight"
+let g:colors_name = "halight"
 
 " Normal {{{1
 hi Normal ctermfg=black ctermbg=NONE guifg=black guibg=#F9F5F9
@@ -64,7 +64,7 @@ hi Visual term=reverse ctermfg=yellow ctermbg=black gui=NONE guifg=Black guibg=#
 hi VisualNOS term=reverse ctermfg=yellow ctermbg=black gui=UNDERLINE guifg=Black guibg=#BDDFFF
 
 " Syntax group {{{1
-hi Comment term=BOLD ctermfg=darkgray guifg=darkcyan
+hi Comment term=BOLD ctermfg=darkgray guifg=darkcyan gui=italic
 hi Constant term=UNDERLINE ctermfg=red guifg=#B91F49
 hi Error term=REVERSE ctermfg=15 ctermbg=9 guibg=Red guifg=White
 hi Identifier term=UNDERLINE ctermfg=Blue guifg=Blue
