@@ -52,6 +52,9 @@ syn keyword asmOpt	call lcall jmp ljmp
 syn keyword asmOpt	ret iret lret
 syn keyword asmOpt	lea cli sti cld std
 
+syn keyword asmOpt	test
+
+
 syn match asmKey  "\.set"
 syn match asmKey  "\.equ"
 syn match asmKey  "\.code"
