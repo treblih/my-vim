@@ -35,7 +35,6 @@ snippet #if
 # Header Include-Guard
 snippet once
 	#ifndef ${1:`toupper(Filename('$1_H', 'UNTITLED_H'))`}
-
 	#define $1
 
 	${2}
@@ -65,12 +64,12 @@ snippet wh
 	}
 # For Loop
 snippet for
-	for (${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
+	for (${2:i} = 0; $2 < ${1:count}; ${3:++}$2) {
 		${4:/* code */}
 	}
 # Custom For Loop
 snippet forr
-	for (${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++}) {
+	for (${1:i} = ${2:0}; ${3:$1 < 10}; ${4:++}$1) {
 		${5:/* code */}
 	}
 # Function
@@ -90,7 +89,7 @@ snippet st
 	}${3: /* optional variable list */};${4}
 # Typedef struct
 snippet tds
-	typedef struct ${2:_$1 }{
+	typedef struct ${2:$1} {
 		${3:/* data */}
 	} ${1:`Filename('$1_t', 'name')`};
 # Typdef enum

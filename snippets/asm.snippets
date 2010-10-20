@@ -1,0 +1,22 @@
+# Function
+snippet func
+	.globl	$1
+		.type	${1:func_name}, @function
+	$1:
+		pushl	%ebp
+		movl	%esp, %ebp
+		${2}
+		leave
+		ret
+
+snippet fun
+	.globl	$1
+		.type	${1:func_name}, @function
+	$1:
+		${2}
+		ret
+
+snippet pushx
+	pushl	%e${1:a}x
+	${2}
+	popl	%e$1x
