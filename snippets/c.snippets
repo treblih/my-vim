@@ -113,3 +113,27 @@ snippet "
 	"${1}"${2}
 snippet '
 	'${1}'${2}
+snippet uva
+	#include <stdio.h>
+	#define	SIZE	${1}
+	#define	FORI(i, val, cond)	for ((i) = (val); (cond); ++(i))	
+	#define	FORIZ(i, cond)		FORI((i), 0, (cond))
+	#define	FORD(i, val, cond)	for ((i) = (val); (cond); --(i))
+	#define	FORDZ(i, cond)		FORD((i), 0, (cond))
+	#ifdef DB
+		#define getchar()		getc(fp)
+		#define	scanf(...)		fscanf(fp, __VA_ARGS__)
+		#undef	stdin
+		#define stdin			fp
+	#endif
+	static FILE *fp;
+
+	int main(int argc, const char *argv[])
+	{
+	#ifdef DB
+		fp = fopen("input", "r");
+	#endif
+		int i;
+		${2}
+		return 0;
+	}
