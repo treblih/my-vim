@@ -120,6 +120,12 @@ snippet uva
 	#define	FORIZ(i, cond)		FORI((i), 0, (cond))
 	#define	FORD(i, val, cond)	for ((i) = (val); (cond); --(i))
 	#define	FORDZ(i, cond)		FORD((i), 0, (cond))
+	#define	MAX(a, b)		({__typeof__ (a) ta = (a);\
+				  	__typeof__ (b) tb = (b);\
+				  	ta > tb ? ta : tb;})
+	#define	MIN(a, b)		({__typeof__ (a) ta = (a);\
+				  	__typeof__ (b) tb = (b);\
+				  	ta < tb ? ta : tb;})
 	#ifdef DB
 		#define getchar()		getc(fp)
 		#define	scanf(...)		fscanf(fp, __VA_ARGS__)
@@ -133,7 +139,7 @@ snippet uva
 	#ifdef DB
 		fp = fopen("input", "r");
 	#endif
-		int i;
-		${2}
+		int i${2};
+		${3}
 		return 0;
 	}
