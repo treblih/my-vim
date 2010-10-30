@@ -115,16 +115,17 @@ snippet '
 	'${1}'${2}
 snippet uva
 	#include <stdio.h>
+	#include <stdlib.h>
 	#include <string.h>
 	#define	SIZE	${1}
 	#define	FORI(i, val, cond)	for ((i) = (val); (cond); ++(i))	
 	#define	FORIZ(i, cond)		FORI((i), 0, (cond))
 	#define	FORD(i, val, cond)	for ((i) = (val); (cond); --(i))
 	#define	FORDZ(i, val)		FORD((i), (val), i >= 0)
-	#define	MAX(a, b) 	({__typeof__(a) ta=(a); __typeof__(b) tb=(b); ta>tb?ta:tb;})
-	#define	MIN(a, b)	({__typeof__(a) ta=(a); __typeof__(b) tb=(b); ta<tb?ta:tb;})
-	#define	SWAP(a, b)	({__typeof__(a) tmp; tmp=(a); (a)=(b); (b)=tmp;})
-	#define	ZERO(a)		memset((a), 0, sizeof(a))
+	#define	MAX(a, b) 	({__typeof__(a) _a=(a), _b=(b); _a>_b?_a:_b;})
+	#define	MIN(a, b)	({__typeof__(a) _a=(a), _b=(b); _a<_b?_a:_b;})
+	#define	SWAP(a, b)	({__typeof__(a) tmp=(a); (a)=(b); (b)=tmp;})
+	#define	ZERO(a)		memset((a), 0, sizeof(a));
 	#ifdef DB
 		#define getchar()		getc(fp)
 		#define	scanf(...)		fscanf(fp, __VA_ARGS__)
