@@ -68,8 +68,6 @@ hi PmenuSel	ctermfg=White ctermbg=Black
 " Inherit the indent from the line above
 set encoding=UTF-8
 set fileencodings=UTF-8,GBK,gb18030,ucs-bom,cp936
-set autoindent
-set cmdheight=1
 set mouse=a
 set so=7
 set cmdheight=1
@@ -90,11 +88,16 @@ set showmatch
 set nobackup
 set nowb
 set noswapfile
-" set expandtab         can't use it
-" set tabstop=2		
-" if no expandtab, here we comment it
-set shiftwidth=8
+
+set autoindent
+set smartindent
 set smarttab
+set expandtab
+" indent
+set shiftwidth=4
+" use spaces to fill tab
+set softtabstop=4
+
 set lbr
 set tw=500
 set ai
