@@ -14,8 +14,8 @@ if has("gui_running")
 	set guioptions-=T
 
 	" Which i have changed
-	colorscheme halight
-	"colorscheme darkspectrum
+	"colorscheme halight
+	colorscheme darkspectrum
 	"colorscheme fine_blue
 	"colorscheme fruit
 
