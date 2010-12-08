@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/etc'
-let g:netrw_dirhist_2='/etc/rc.d/init.d'
-let g:netrw_dirhist_3='/media/MY/CS/BookNote/latex.txt'
-let g:netrw_dirhist_4='/etc/pacman.d'
-let g:netrw_dirhist_5='/home/hask/share/txt'

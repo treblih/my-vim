@@ -6,8 +6,8 @@
 if has("gui_running")
  	" source ~/.vim/session.vim
 	"Font = Fixed, Size = 8
-	"set guifont=Fixed\ 9
-	set guifont=Mono\ 8
+	set guifont=Fixed\ 10
+	"set guifont=Mono\ 7
 	" Hide Scrollball(r), Menubar, Toolbar
 	set guioptions-=r
 	set guioptions-=m
