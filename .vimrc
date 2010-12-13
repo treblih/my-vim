@@ -1,25 +1,23 @@
-"
 " 09.11.12
-" Yang Zhang
-"
+" Yang Zhang <gtk2hs@gmail.com>
 
 if has("gui_running")
  	" source ~/.vim/session.vim
-	"Font = Fixed, Size = 8
-	set guifont=Fixed\ 10
-	"set guifont=Mono\ 7
-	" Hide Scrollball(r), Menubar, Toolbar
+        " ugly Chinese chars
+	"set guifont=fixed\ 10
+        " friendly to Chinese chars
+	set guifont=mono\ 8
+	" hide scrollball(r), menubar, toolbar
 	set guioptions-=r
 	set guioptions-=m
 	set guioptions-=T
 
-	" Which i have changed
 	"colorscheme halight
 	colorscheme darkspectrum
 	"colorscheme fine_blue
 	"colorscheme fruit
 
-	" Toggle menu and toolbar
+	" toggle menu and toolbar
 	map <silent> <F12> :if &guioptions =~# 'T' <Bar>
 		\set guioptions-=T <Bar>
 		\set guioptions-=m <Bar>
@@ -38,7 +36,7 @@ let c_gnu = 1
 
 syntax          enable
 filetype        plugin on
-" Auto indent when meet with different filetype
+" auto indent when meet with different filetype
 filetype        indent on
 autocmd FileType c set omnifunc=ccomplete#Complete
 
@@ -65,9 +63,15 @@ hi PmenuSel	ctermfg=White ctermbg=Black
 
 "set tags+=~/.vim/c-support/wordlists/tags
 
-" Inherit the indent from the line above
-set encoding=UTF-8
-set fileencodings=UTF-8,GBK,gb18030,ucs-bom,cp936
+" 3 env:
+" encoding(enc): display mechanism no matter what encoding it is original
+"                same with sys locale
+" fileencoding(fenc): change & save to change encoding of the target file
+"                     :set fenc=utf-8 :w
+"                     :set fenc? to check what is
+" fileencodings(fencs): guess list when opening a file
+set encoding=utf-8
+set fileencodings=utf-8,gbk,gb18030,ucs-bom,cp936,utf-16
 set mouse=a
 set so=7
 set cmdheight=1
