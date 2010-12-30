@@ -37,10 +37,7 @@ rem *
 == comment.file-description == start ==
 #!/bin/bash - 
 #===============================================================================
-#
 #          FILE:  |FILENAME|
-# 
-#         USAGE:  ./|FILENAME| 
 # 
 #   DESCRIPTION:  <CURSOR>
 # 
@@ -49,7 +46,6 @@ rem *
 #         NOTES:  ---
 #      REVISION:  ---
 #         EMAIL: |EMAIL|
-#       COMPANY: |COMPANY|
 #       CREATED: |DATE|
 #     COPYRIGHT: |COPYRIGHT|
 #===============================================================================
