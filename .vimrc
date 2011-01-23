@@ -1,5 +1,5 @@
 " 09.11.12
-" Yang Zhang <gtk2hs@gmail.com>
+" armx86@gmail.com
 
 if has("gui_running")
  	" source ~/.vim/session.vim
@@ -160,7 +160,7 @@ map <leader>s? z=
 " for ,+...
 map <leader>q :q!<CR>
 map <leader>, :w<CR>
-map <leader>c :!ctags -R --fields=+lS<CR>
+map <leader>ct :!ctags -R --fields=+lS<CR>
 map <leader>a :!./a.out<CR>
 
 " % -> current file
@@ -217,7 +217,7 @@ map     <F5> :%s//g<left><left>
 " i like vsplit rather than split
 map     <F8> :split 
 " quickly change tags, just 4 ctags
-map     <F10> :set tags=~//tags<left><left><left><left><left>
+map     <F10> :set tags=~/tags<left><left><left><left>
 " quick comment
 " map     <F12> i/*<Esc>ea*/<Esc>
 
@@ -277,7 +277,7 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 " generate data files
 nmap <silent><leader>csc :!cscope -Rbqk<CR>
 " connection
-nmap <silent><leader>cka :cs kill 0<CR>:cs add cscope.out<CR>
+nmap <silent><leader>cka :cs kill 0<CR>:cs add ~/cscope.out<left><left><left><left><left><left><left><left><left><left>
 " quick binding
 nmap <A-s> :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <A-g> :cs find g <C-R>=expand("<cword>")<CR><CR>
