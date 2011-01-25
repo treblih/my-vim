@@ -25,6 +25,8 @@ if has("gui_running")
 		\set guioptions+=T <Bar>
 		\set guioptions+=m <Bar>
 	    \endif<CR>
+else
+        colorscheme tango2
 endif
 
 let mapleader = ","
@@ -40,26 +42,8 @@ filetype        plugin on
 filetype        indent on
 autocmd FileType c set omnifunc=ccomplete#Complete
 
-" colors
-hi Comment      ctermfg=Black
-hi Constant     term=bold ctermfg=DarkYellow		" const char
-hi Special      term=bold ctermfg=Blue		" \n \t
-hi Identifier   term=bold ctermfg=brown          	" asm
-hi Statement    term=bold ctermfg=LightCyan		" key word
-hi PreProc      term=bold ctermfg=White            	" include define
-hi Type         term=bold ctermfg=LightGreen            " type
-hi Ignore       ctermfg=White ctermbg=Black
-hi Error        term=reverse ctermbg=Red ctermfg=White
-hi Todo         term=standout ctermbg=Yellow ctermfg=Red
-hi Search       term=standout ctermbg=Yellow ctermfg=Black
-hi ErrorMsg     term=reverse ctermbg=Red ctermfg=White
-hi StatusLine   ctermfg=darkblue ctermbg=gray
-hi StatusLineNC ctermfg=white ctermbg=Black
 " Just for c_gnu
 hi gnu		guifg=#D0517C gui=bold
-
-hi Pmenu	ctermfg=Black ctermbg=White
-hi PmenuSel	ctermfg=White ctermbg=Black
 
 "set tags+=~/.vim/c-support/wordlists/tags
 
@@ -167,6 +151,7 @@ map <leader>a :!./a.out<CR>
 autocmd FileType c map <buffer><silent><leader>gcc :w<CR>:!gcc -Wall -g -std=gnu99 % 2> %.gcc<CR>:cf! %.gcc<CR>:copen<CR>
 autocmd FileType c map <buffer><silent><leader>in :w<CR>:!indent -linux %<CR>:cf! %<CR>
 autocmd FileType c map <buffer><silent><leader>fl :!flawfinder -DQ % > flaw.out<CR>
+autocmd FileType tex map <buffer><silent><leader>pdf :!pdflatex %<CR>
 
 " map <leader>g :!gcc -Wall %<CR>		
 map <leader>d :!./dip<CR>
