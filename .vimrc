@@ -152,6 +152,7 @@ autocmd FileType c map <buffer><silent><leader>gcc :w<CR>:!gcc -Wall -g -std=gnu
 autocmd FileType c map <buffer><silent><leader>in :w<CR>:!indent -linux %<CR>:cf! %<CR>
 autocmd FileType c map <buffer><silent><leader>fl :!flawfinder -DQ % > flaw.out<CR>
 autocmd FileType tex map <buffer><silent><leader>pdf :!pdflatex %<CR>
+autocmd FileType tex map <buffer><silent>tt $3a\tt <ESC>
 
 " map <leader>g :!gcc -Wall %<CR>		
 map <leader>d :!./dip<CR>
@@ -262,7 +263,7 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 " generate data files
 nmap <silent><leader>csc :!cscope -Rbqk<CR>
 " connection
-nmap <silent><leader>cka :cs kill 0<CR>:cs add ~/cscope.out<left><left><left><left><left><left><left><left><left><left>
+nmap <silent><leader>cka :cs kill 0<CR>:cs add cscope.out<CR>
 " quick binding
 nmap <A-s> :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <A-g> :cs find g <C-R>=expand("<cword>")<CR><CR>
