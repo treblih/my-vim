@@ -38,7 +38,7 @@ endif
 " General colours
 " =============================================================================
 
-hi Normal guibg=#2E3436 guifg=#eeeeec 
+hi Normal guibg=#444444 guifg=#eeeeec 
 hi Cursor gui=none guibg=White guifg=Black
 
 hi Folded guibg=#4D585B guibg=#d2d2d2

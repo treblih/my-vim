@@ -6,14 +6,14 @@ if has("gui_running")
         " ugly Chinese chars
 	"set guifont=fixed\ 10
         " friendly to Chinese chars
-	set guifont=mono\ 8
+	set guifont=mono\ 9
 	" hide scrollball(r), menubar, toolbar
 	set guioptions-=r
 	set guioptions-=m
 	set guioptions-=T
 
 	"colorscheme halight
-	colorscheme darkspectrum
+	"colorscheme darkspectrum
 	"colorscheme fine_blue
 	"colorscheme fruit
 
@@ -25,9 +25,8 @@ if has("gui_running")
 		\set guioptions+=T <Bar>
 		\set guioptions+=m <Bar>
 	    \endif<CR>
-else
-        colorscheme tango2
-endif
+endif 
+colorscheme tango2
 
 let mapleader = ","
 let g:mapleader = ","
