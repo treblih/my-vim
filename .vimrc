@@ -9,6 +9,7 @@ if has("gui_running")
 	set guifont=mono\ 9
 	" hide scrollball(r), menubar, toolbar
 	set guioptions-=r
+	set guioptions-=L
 	set guioptions-=m
 	set guioptions-=T
 
