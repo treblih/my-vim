@@ -9,6 +9,7 @@ if has("gui_running")
 	set guifont=mono\ 8
 	" hide scrollball(r), menubar, toolbar
 	set guioptions-=r
+	set guioptions-=L
 	set guioptions-=m
 	set guioptions-=T
 
@@ -25,9 +26,8 @@ if has("gui_running")
 		\set guioptions+=T <Bar>
 		\set guioptions+=m <Bar>
 	    \endif<CR>
-else
-        colorscheme tango2
-endif
+endif 
+"colorscheme tango2
 
 let mapleader = ","
 let g:mapleader = ","
@@ -46,7 +46,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 hi gnu		guifg=#D0517C gui=bold
 
 "set tags+=~/.vim/c-support/wordlists/tags
-
+  
 " 3 env:
 " encoding(enc): display mechanism no matter what encoding it is original
 "                same with sys locale
@@ -145,7 +145,6 @@ map <leader>s? z=
 map <leader>q :q!<CR>
 map <leader>, :w<CR>
 map <leader>ct :!ctags -R --fields=+lS<CR>
-"map <leader>a :!./a.out<CR>
 
 " % -> current file
 autocmd FileType c map <buffer><silent><leader>gcc :w<CR>:!gcc -Wall -g -std=gnu99 % 2> %.gcc<CR>:cf! %.gcc<CR>:copen<CR>
@@ -154,9 +153,10 @@ autocmd FileType c map <buffer><silent><leader>fl :!flawfinder -DQ % > flaw.out<
 autocmd FileType tex map <buffer><silent><leader>pdf :!pdflatex %<CR>
 autocmd FileType tex map <buffer><silent>tt $3a\tt <ESC>
 
-" map <leader>g :!gcc -Wall %<CR>		
-"map <leader>e :e!  ~/.vimrc<CR>
-"autocmd! bufwritepost ~/.vimrc source ~/.vimrc
+map <leader>vim :e!  ~/.vimrc<CR>
+" auto reload ~/.vimrc
+autocmd! bufwritepost ~/.vimrc source ~/.vimrc
+map <leader>s :source! ~/.vim/vimrc<CR>
 
 " Read errorfile in QuickFix window
 map <leader>f :cf! flaw.out<CR>:copen<CR>
