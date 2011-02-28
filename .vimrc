@@ -12,8 +12,8 @@ if has("gui_running")
 	set guioptions-=m
 	set guioptions-=T
 
-	"colorscheme halight
-	colorscheme darkspectrum
+	colorscheme halight
+	"colorscheme darkspectrum
 	"colorscheme fine_blue
 	"colorscheme fruit
 
@@ -145,7 +145,7 @@ map <leader>s? z=
 map <leader>q :q!<CR>
 map <leader>, :w<CR>
 map <leader>ct :!ctags -R --fields=+lS<CR>
-map <leader>a :!./a.out<CR>
+"map <leader>a :!./a.out<CR>
 
 " % -> current file
 autocmd FileType c map <buffer><silent><leader>gcc :w<CR>:!gcc -Wall -g -std=gnu99 % 2> %.gcc<CR>:cf! %.gcc<CR>:copen<CR>
@@ -155,12 +155,8 @@ autocmd FileType tex map <buffer><silent><leader>pdf :!pdflatex %<CR>
 autocmd FileType tex map <buffer><silent>tt $3a\tt <ESC>
 
 " map <leader>g :!gcc -Wall %<CR>		
-map <leader>d :!./dip<CR>
-
-map <leader>e :e!  ~/.vimrc<CR>
-" auto reload ~/.vimrc
-autocmd! bufwritepost ~/.vimrc source ~/.vimrc
-map <leader>s :source! ~/.vim/vimrc<CR>
+"map <leader>e :e!  ~/.vimrc<CR>
+"autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 
 " Read errorfile in QuickFix window
 map <leader>f :cf! flaw.out<CR>:copen<CR>
