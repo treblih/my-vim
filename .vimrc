@@ -6,7 +6,7 @@ if has("gui_running")
         " ugly Chinese chars
 	"set guifont=fixed\ 10
         " friendly to Chinese chars
-	set guifont=mono\ 8
+	set guifont=mono\ 9
 	" hide scrollball(r), menubar, toolbar
 	set guioptions-=r
 	set guioptions-=L
