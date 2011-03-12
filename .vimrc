@@ -6,7 +6,7 @@ if has("gui_running")
         " ugly Chinese chars
 	"set guifont=fixed\ 10
         " friendly to Chinese chars
-	set guifont=mono\ 9
+	set guifont=mono\ 8
 	" hide scrollball(r), menubar, toolbar
 	set guioptions-=r
 	set guioptions-=L
@@ -128,12 +128,8 @@ inoremap $w ""<esc>:let leavechar='"'<CR>i
 inoremap /? /*  */<esc>:let leavechar="/"<CR>hhi
 
 " for new features in VIM 7.X, we have TAB
-map <A-n> :tabn<CR>
-map <A-p> :tabp<CR>
-noremap <S-Tab> :tabf!<Space>
-
-" for Taglist
-" map <leader>t  :Tlist<CR>
+map <A-n> :tnext<CR>
+map <A-p> :tprevious<CR>
 
 " spell check
 map <leader>sn ]s
@@ -150,6 +146,7 @@ map <leader>ct :!ctags -R --fields=+lS<CR>
 autocmd FileType c map <buffer><silent><leader>gcc :w<CR>:!gcc -Wall -g -std=gnu99 % 2> %.gcc<CR>:cf! %.gcc<CR>:copen<CR>
 autocmd FileType c map <buffer><silent><leader>in :w<CR>:!indent -linux %<CR>:cf! %<CR>
 autocmd FileType c map <buffer><silent><leader>fl :!flawfinder -DQ % > flaw.out<CR>
+autocmd FileType c map <buffer><silent><leader>aout :!./a.out<CR>
 autocmd FileType tex map <buffer><silent><leader>pdf :!pdflatex %<CR>
 autocmd FileType tex map <buffer><silent>tt $3a\tt <ESC>
 
