@@ -93,6 +93,7 @@ set si
 set cindent
 set wrap
 set mat=2
+set clipboard=unnamed   " FINALLY
 "set dictionary=/usr/share/dict/cracklib-small
 
 " Set session, viminfo
@@ -149,6 +150,8 @@ autocmd FileType c map <buffer><silent><leader>fl :!flawfinder -DQ % > flaw.out<
 autocmd FileType c map <buffer><silent><leader>aout :!./a.out<CR>
 autocmd FileType tex map <buffer><silent><leader>pdf :!pdflatex %<CR>
 autocmd FileType tex map <buffer><silent>tt $3a\tt <ESC>
+
+au BufNewFile,BufRead *.cflow setf cflow
 
 map <leader>vim :e!  ~/.vimrc<CR>
 " auto reload ~/.vimrc
