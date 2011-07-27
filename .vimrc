@@ -6,15 +6,15 @@ if has("gui_running")
         " ugly Chinese chars
 	"set guifont=fixed\ 10
         " friendly to Chinese chars
-	set guifont=mono\ 8
+	set guifont=mono\ 9
 	" hide scrollball(r), menubar, toolbar
 	set guioptions-=r
 	set guioptions-=L
 	set guioptions-=m
 	set guioptions-=T
 
-	colorscheme halight
-	"colorscheme darkspectrum
+        "colorscheme halight
+	colorscheme darkspectrum
 	"colorscheme fine_blue
 	"colorscheme fruit
 
@@ -55,7 +55,7 @@ hi gnu		guifg=#D0517C gui=bold
 "                     :set fenc? to check what is
 " fileencodings(fencs): guess list when opening a file
 set encoding=utf-8
-set fileencodings=utf-8,gbk,gb18030,ucs-bom,cp936,utf-16
+set fileencodings=utf-8,gbk,gb18030,gb2312,ucs-bom,cp936,utf-16
 set mouse=a
 set so=7
 set cmdheight=1
@@ -77,14 +77,18 @@ set nobackup
 set nowb
 set noswapfile
 
+" indent
 set autoindent
 set smartindent
 set smarttab
-set expandtab
-" indent
+set tabstop=4
 set shiftwidth=4
 " use spaces to fill tab
 set softtabstop=4
+set expandtab
+if has("autocmd")
+    autocmd FileType c setlocal ts=8 sts=8 sw=8 expandtab
+endif
 
 set lbr
 set tw=500
@@ -93,7 +97,7 @@ set si
 set cindent
 set wrap
 set mat=2
-set clipboard=unnamed   " FINALLY
+"set clipboard=unnamed   " FINALLY
 "set dictionary=/usr/share/dict/cracklib-small
 
 " Set session, viminfo
@@ -257,7 +261,7 @@ nmap mm :WMToggle<cr>
 " for cscope
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 " generate data files
-nmap <silent><leader>csc :!cscope -Rbqk<CR>
+nmap <silent><leader>csc :!cscope -Rbkq<CR>
 " connection
 nmap <silent><leader>cka :cs kill 0<CR>:cs add cscope.out<CR>
 " quick binding
