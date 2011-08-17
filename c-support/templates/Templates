@@ -5,8 +5,9 @@ $ =============================================================
 $
 |AUTHOR|    = Yang Zhang
 |EMAIL|     = armx86@gmail.com
-|COMPANY|   = 
-|COPYRIGHT| = Copyright (c) |YEAR|, |AUTHOR|
+|COMPANY|   = yxlink
+$ |COPYRIGHT| = Copyright (c), |COMPANY|, |YEAR|
+|COPYRIGHT| = |COMPANY|, Copyright (c)
 |STYLE|     = C
 $
 $ =============================================================
