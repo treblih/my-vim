@@ -13,8 +13,8 @@ if has("gui_running")
 	set guioptions-=m
 	set guioptions-=T
 
-        "colorscheme halight
-	colorscheme darkspectrum
+    colorscheme halight
+	"colorscheme darkspectrum
 	"colorscheme fine_blue
 	"colorscheme fruit
 
@@ -88,7 +88,10 @@ set softtabstop=4
 set expandtab
 if has("autocmd")
     autocmd FileType c setlocal ts=8 sts=8 sw=8 expandtab
+    autocmd FileType h setlocal ts=8 sts=8 sw=8 expandtab
 endif
+"set list
+"et listchars=tab:▸\ ,eol:¬
 
 set lbr
 set tw=500
