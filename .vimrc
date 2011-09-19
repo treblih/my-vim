@@ -6,7 +6,7 @@ if has("gui_running")
         " ugly Chinese chars
 	"set guifont=fixed\ 10
         " friendly to Chinese chars
-	set guifont=mono\ 9
+	set guifont=mono\ 8
 	" hide scrollball(r), menubar, toolbar
 	set guioptions-=r
 	set guioptions-=L
@@ -88,6 +88,7 @@ set softtabstop=4
 set expandtab
 if has("autocmd")
     autocmd FileType c setlocal ts=8 sts=8 sw=8 expandtab
+    autocmd FileType cpp setlocal ts=8 sts=8 sw=8 expandtab
     autocmd FileType h setlocal ts=8 sts=8 sw=8 expandtab
 endif
 "set list
